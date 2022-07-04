@@ -1,0 +1,184 @@
+body {
+    font: 14px "Century Gothic", Futura, sans-serif;
+    margin: 20px;
+    background-image: url("../images/tic-tac-toe.webp");
+}
+
+h2 {
+  color: #006b69;
+  font-weight: bold;
+}
+
+ol, ul {
+    padding-left: 30px;
+    list-style: none;
+}
+
+.navbar-brand {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 2rem;
+}
+
+.navbar-brand a {
+  color: #006b69;
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    background: #fff;
+    border: 1px solid #999;
+    float: left;
+    font-size: 72px;
+    font-weight: bold;
+    line-height: 102px;
+    height: 102px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 102px;
+}
+
+.square:focus {
+    outline: none;
+}
+
+.kbd-navigation .square:focus {
+    background: #ddd;
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+/* ************************** */
+/* Game info styling */
+/* ************************** */
+.game-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.game-info ol {
+  padding: 0;
+}
+
+.game-info ol .btn {
+  padding: 12px;
+  width: 200px;
+  margin: 1rem;
+  background-color: #01c9c5;
+  border-color: #01c9c5;
+  font-weight: bold;
+}
+
+.game-info ol .btn:hover {
+  background-color: #006b69;
+  border-color: #006b69;
+}
+
+/* ************************** */
+
+
+/* ************************** */
+/* Game board styling */
+/* ************************** */
+
+.game-board {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 0rem 2rem 4rem 2rem;
+}
+
+.game-status {
+  margin-bottom: 10px;
+}
+
+.winningSquare {
+  background-color: #01c9c5;
+  color: white;
+}
+
+.game-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 3rem;
+}
+
+/* ************************** */
+/* form styling */
+/* ************************** */
+
+.forms-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  margin: 0 2rem 2rem 2rem;
+}
+.field .form-label {
+  width: 230px;
+  font-weight: bold;
+  color: #006b69;
+  font-size: 24px;
+}
+
+.input.form-control {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006b69;
+}
+/* ************************** */
+
+
+/* ************************** */
+/* league table */
+/* ************************** */
+.league-table {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+.league-table h2 {
+  margin-top: 4px;
+}
+.table.table-striped th {
+  text-align: center;
+}
+
+.table.totals {
+  margin-top: 24px;
+}
+/* ************************** */
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
+}
