@@ -9,17 +9,20 @@ import LeagueTable from "../LeagueTable/LeagueTable";
 const Game = () => {
   const [gameHistory, setGameHistory] = useState([
     { squares: Array(9).fill(null) },
-  ]); // Start of game
-  const [stepNumber, setStepNumber] = useState(0);
-  const [xIsNext, setXisNext] = useState(true);
+  ]); // Start of game - creates an array of nine values all with a value of null
+  const [stepNumber, setStepNumber] = useState(0); // tracks which round we are on
+  const [xIsNext, setXisNext] = useState(true); // tracks who's turn it is
   const [playerName, setPlayerName] = useState({
+    // tracks player names
     player1: "Player X",
     player2: "Player O",
   });
-  const [winGameHistory, setWinGameHistory] = useState([]);
+  const [winGameHistory, setWinGameHistory] = useState([]); // tracks game wins
 
   const calculateWinner = (squares) => {
+    // function to determine if there is a winner
     const lines = [
+      // possible win combos
       [0, 1, 2],
       [3, 4, 5],
       [6, 7, 8],
@@ -31,6 +34,7 @@ const Game = () => {
     ];
 
     for (let i = 0; i < lines.length; i++) {
+      // check if all 3 squares on a line match
       const [a, b, c] = lines[i];
       if (
         squares[a] &&
@@ -41,20 +45,21 @@ const Game = () => {
       }
     }
 
-    return { square: null, line: [] };
+    return { square: null, line: [] }; // if no win return null and empty array
   };
 
   const handleClick = (i) => {
-    const history = gameHistory.slice(0, stepNumber + 1);
-    const current = history[history.length - 1];
-    const squares = current.squares.slice();
+    const history = gameHistory.slice(0, stepNumber + 1); //grab all moves up until this point
+    const current = history[history.length - 1]; //grab the latest move (object with squares as the key)
+    const squares = current.squares.slice(); //grab the array of squares values (x, o or null)
     if (calculateWinner(squares).square || squares[i]) {
+      // if user clicks on block and either there is a winner or the square clicked is not null do nothing
       return;
     }
 
-    squares[i] = xIsNext ? "X" : "O";
+    squares[i] = xIsNext ? "X" : "O"; //assigns the symbol to the square in the squares array based on who's turn it is
 
-    setGameHistory([...history, { squares }]);
+    setGameHistory([...history, { squares }]); //updates with last move
     setStepNumber(history.length);
     setXisNext(!xIsNext);
 

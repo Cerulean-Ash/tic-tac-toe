@@ -5,7 +5,7 @@ import Navbar from "react-bootstrap/Navbar";
 const AppHeader = () => (
   <Navbar fluid="true">
     <Navbar.Brand>
-      <Link to="/">Tic-Tac-Toe (Standalone)</Link>
+      <Link to="/">Tic-Tac-Toe</Link>
     </Navbar.Brand>
   </Navbar>
 );
