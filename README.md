@@ -2,7 +2,7 @@
 
 This is a Tic-Tac_Toe game based on the React's [__Intro to React Tutorial--](https://reactjs.org/tutorial/tutorial.html)
 
-> Live demo [_here_](tic-tac-toe-two-sigma.vercel.app/). <!-- If you have the project hosted somewhere, include the link here. -->
+> Live demo [_here_](https://tic-tac-toe-two-sigma.vercel.app/). <!-- If you have the project hosted somewhere, include the link here. -->
 
 ## Table of Contents
 
